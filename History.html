@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-analytics.js"></script>
+    <script src='js/firebase.js'></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/History.js"></script>
+    <title>Blood Pal</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  </head>
+  <body>
+    <section class="w3l-signup">
+    <div class='w3-container top'>
+  <a class='w3schools-logo notranslate' href='index.html'>BloodPal<span class='dotcom'>.com</span></a>
+
+  <div id="loginactioncontainer" class='w3-right'>
+    <div id="mypagediv"></div>
+    <a id="w3loginbtn" style="display:none;" class="login w3-right" href='javascript:void(0);' onclick='w3_open_nav("login")'>LOG IN</a>
+  </div>
+</div>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="volunteer_home.html">Home <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="NewCamp.html">New Camp<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+      <li class="nav-item active">
+        <a class="nav-link" href="History.html">History<span class="sr-only"></span></a>
+      </li>
+  </div>
+</nav>
+<div class="logo">
+	<p class="brand-logo">History</p>
+  </div>
+  <div>
+    <table id='historyTable'>
+      <tr>
+        <th>S.No</th>
+        <th>Camp ID</th>
+        <th>Date</th>
+        <th>Area</th>
+        <th>No. Of Donors</th>
+      </tr>
+    </table>
+  </div>
+  <div style="text-align: center;">
+  <form>
+    <select id="campid">
+      <option selected>select the camp</option>
+    </select>
+    <button type="button" id='add' style="text-align: center; "> Add donor</button>
+  </form>  
+  </div>
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+  </section>
+  <script>
+     $(function(){
+       $("#campid").change(function(){
+         localStorage.setItem('key',this.value);
+         console.log(localStorage.getItem('key'));
+       });
+     });
+
+     const addBtn=document.getElementById('add');
+
+     addBtn.addEventListener('click', (e) => 
+    {
+      e.preventDefault();
+      if(localStorage.getItem('key')!=='select the camp' && localStorage.getItem('key')!=='')
+      {
+        window.location.replace("donor_reg.html");
+      }
+      else
+      {
+        alert('Select the Camp');
+      }
+    });
+  </script>
+  </body>
+</html>

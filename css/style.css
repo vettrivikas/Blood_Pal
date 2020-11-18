@@ -1,0 +1,377 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    color: #585858;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+a:hover,a:active{color:#4CAF50}
+.top {
+position:relative;
+background-color:#ffffff;
+height:68px;
+padding-top:20px;
+line-height:50px;
+overflow:hidden;
+z-index:2;
+}
+.w3schools-logo {
+font-family:fontawesome;
+text-decoration:none;
+line-height:1;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+font-size:37px;
+letter-spacing:3px;
+color:#555555;
+display:block;
+position:absolute;
+top:17px;
+}
+.w3schools-logo .dotcom {color:#4CAF50}
+
+
+#historyTable
+{
+    border-collapse: collapse;
+    background-color: grey;
+    font-size: medium;
+    text-align: center;
+    width: 100%;
+}
+
+#historyTable td,#historyTable th
+{
+    
+    padding: 8px;
+}
+
+#historyTable th
+{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: gray;
+    color: white;
+}
+
+
+#donor_details
+{
+    border-collapse: collapse;
+    background-color: grey;
+    font-size: medium;
+    text-align: center;
+}
+
+#donor_details td,#donor_details th
+{
+    
+    padding: 8px;
+}
+
+#donor_details th
+{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: gray;
+    color: white;
+}
+
+
+/*  wrapper */
+.wrapper {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .wrapper {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .wrapper {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+        max-width: 1140px;
+    }
+}
+
+/*  /wrapper */
+
+.d-grid {
+    display: grid;
+}
+
+button,
+input,
+select {
+    -webkit-appearance: none;
+    outline: none;
+}
+
+button,
+.btn,
+select {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+img
+{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+.w3l-signup {
+    position: relative;
+    height: 180vh;
+    background-color:#fff;
+    background-size: cover;
+}
+
+.logo {
+    text-align: center;
+}
+
+p.brand-logo {
+    color: #000000;
+    color: black;
+    font-size: 42px;
+}
+
+.w3l-signup .overlay {
+    display: grid;
+    padding: 30px 0px;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.w3l-signup .form-section {
+    max-width: 450px;
+    margin: 30px auto 20px;
+    padding: 2rem 3rem;
+    border-radius: 4px;
+    box-shadow: 0px 9px 24px 5px rgba(0, 0, 0, 0.04);
+    background: transparent;
+}
+
+.w3l-signup .form-section1 {
+    max-width: 600px;
+    margin: 30px auto 20px;
+    padding: 2rem 3rem;
+    border-radius: 4px;
+    box-shadow: 0px 9px 24px 5px rgba(0, 0, 0, 0.04);
+    background:transparent;
+}
+
+.w3l-signup .form-section h3 {
+    font-size: 30px;
+    line-height: 40px;
+    color: #090909;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.w3l-signup .form-input input[type="email"],
+.w3l-signup .form-input input[type="password"],
+.w3l-signup .form-input input[type="text"],
+.w3l-signup .form-input select[type="gender"],
+.w3l-signup .form-input input[type="date"],
+.w3l-signup .form-input input[type="number"] {
+    background: #fff;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 18px;
+    color: #000;
+    -webkit-appearance: none;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.w3l-signup .form-input input[type="email"]:focus,
+.w3l-signup .form-input input[type="password"]:focus,
+.w3l-signup .form-input input[type="text"]:focus,
+.w3l-signup .form-input select[type="gender"]:focus,
+.w3l-signup .form-input input[type="date"]:focus,
+.w3l-signup .form-input input[type="number"]:focus {
+    background: #fff;
+    color: #090909;
+    border: 1px solid #35497a;
+    border-radius: 4px;
+}
+
+.w3l-signup .form-input {
+    margin: 10px 0 10px 0;
+    background: rgba(249, 250, 255, 0.09);
+    display: grid;
+    align-items: center;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+}
+
+.w3l-signup p.signup a {
+    font-weight: bold;
+    color: #35497a;
+}
+
+.w3l-signup p.signup a:hover {
+    text-decoration: underline;
+}
+
+.w3l-signup p.signup {
+    color: #5a5a5a;
+    font-size: 15px;
+    display: block;
+    margin-top: 25px;
+    padding-top: 20px;
+    text-align: center;
+    border-top: 1px solid #dcdcdc;
+}
+
+.w3l-signup .social-icons {
+    display: grid;
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.w3l-signup .continue {
+    position: relative;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+.w3l-signup button.btn {
+    opacity: 0.8;
+    width: 100%;
+}
+
+.w3l-signup button.btn:hover {
+    opacity: 1;
+}
+
+.theme-button {
+    transition: 0.3s ease-out;
+    display: inline-block;
+    line-height: 52px;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px 30px;
+    text-transform: uppercase;
+    border: none;
+    background-color: #35497a;
+    color: #fff;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+
+/*  copyright */
+.copy-right {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 35px;
+}
+
+.copy-right p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.copy-right p a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.copy-right p a:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+    .copy-right {
+        bottom: 5px;
+    }
+}
+
+/*  /copyright */
+
+@media (max-width: 1080px) {
+    .w3l-signup .overlay {
+        padding: 20px 0px;
+    }
+}
+
+@media (max-width: 414px) {
+    .w3l-signup .form-section h3 {
+        font-size: 32px;
+    }
+}
+
+#follow{
+    min-height:250px;
+    background:rgb(38, 38, 38);
+}
+
+i{
+    font-size:27px;
+}
+
+i:hover{
+    color:RGB(237,41,57);
+}
+
+
+
+
